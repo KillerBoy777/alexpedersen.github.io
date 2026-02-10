@@ -1,0 +1,62 @@
+/* Main body text font size */
+body {
+    font-size: 1.3rem;
+    background-color: #ededed;
+}
+/* Make sure input boxes etc carry same font size */
+input, select, button {
+    font-size: inherit;
+}
+/* Main title css */
+.main-title {
+    font-size: 3rem;
+}
+/* Main body container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 40px;
+}
+/* subcontainer div */
+.subcontainer {
+    background-color: #E8E2D8;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 0;
+}
+input[type="range"] {
+    width: 50%;
+    cursor:pointer;
+}
+
+/* ---------- Button Group Stuff ---------- */
+/* button group div */
+.button-group {
+    display: flex;
+    gap: 50px;
+    margin: 20px 0;
+    justify-content: center;
+}
+/* button testing */
+button {
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+/* reset button */
+.reset-button {
+    background-color: #f28383;
+    color: white;
+}
+.reset-button:hover {
+    background-color: red;
+}
+/* submit button */
+.submit-button {
+    background-color: #88f283;
+}
+.submit-button:hover {
+    background-color: green;
+}
+/* ------------------------------------------ */
