@@ -1,62 +1,169 @@
-/* Main body text font size */
+/*
+    Program Name: 	Homework 1 Transaction Processing CSS 
+	Author: 		Alexander Pedersen
+	Date Created: 	2/4/2026 4:25 PM
+	Date Modified:	2/19/2026 11:37 AM
+	Version:		1.2
+	Description:
+					CSS stylesheet for Homework 1 Transaction
+                    Processing.
+*/
+
+/* VARIABLES */
+
+:root {
+    --bg-color: rgb(232, 232, 232);
+    --sub-bg: #E8E2D8;
+    --primary-font: 'Lucida Sans', 'Lucida Grande', sans-serif;
+    --success-green: #88f283;
+    --danger-red: #f28383;
+    --transition-speed: 0.3s;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+/*
+    BASE STYLES
+*/
+
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-size: 1.3rem;
-    background-color: #ededed;
+    font-family: var(--primary-font);
+    background-color: var(--bg-color);
+    /* testing */
+    display: flex;
+    flex-direction: column;
 }
-/* Make sure input boxes etc carry same font size */
+
+.main-content {
+    flex: 1;
+}
+
+/* Ensure form elements inherit the body font */
 input, select, button {
     font-size: inherit;
 }
-/* Main title css */
-.main-title {
-    font-size: 3rem;
+
+button {
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition-speed);
 }
-/* Main body container */
+
+/* CONTAINERS */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 40px;
 }
-/* subcontainer div */
+
 .subcontainer {
-    background-color: #E8E2D8;
+    background-color: var(--sub-bg);
     border-radius: 20px;
     padding: 20px;
-    margin: 20px 0;
-}
-input[type="range"] {
-    width: 50%;
-    cursor:pointer;
+    margin: 0 auto;
+    width: 100%;
 }
 
-/* ---------- Button Group Stuff ---------- */
-/* button group div */
+/* HEADER */
+
+header {
+    display: flex; 
+    align-items: center; 
+    gap: 20px;
+}
+
+/* FOOTER */
+
+footer.footer {
+    display: flex; 
+    justify-content: center;
+    width: 100%;
+    margin-top: auto; /* Pushes footer to the bottom if content is short */
+    margin-bottom: 20px;
+}
+
+footer.footer .subcontainer {
+    display: flex;
+    justify-content: space-between; /* This spreads items apart */
+    align-items: center;
+    gap: 20px; /* Backup spacing */
+}
+
+
+/*
+    FORM ELEMENTS
+*/
+input:required {
+    border-width: 2px;
+}
+
+input:focus {
+    box-shadow: 0 0 1em 8px var(--shadow-color);
+    transition: var(--transition-speed);
+}
+
+input[type="range"] {
+    width: 50%;
+    cursor: pointer;
+}
+
+/*
+    COMPONENTS (Buttons, Logos, Titles)
+*/
+.main-title {
+    font-size: 3rem;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+#middlei {
+    width: 25px;
+}
+
+/* Button Grouping */
 .button-group {
     display: flex;
     gap: 50px;
     margin: 20px 0;
     justify-content: center;
 }
-/* button testing */
-button {
-    padding: 8px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s;
+
+.submit-button {
+    background-color: var(--success-green);
 }
-/* reset button */
+.submit-button:hover {
+    background-color: green;
+}
+
 .reset-button {
-    background-color: #f28383;
+    background-color: var(--danger-red);
     color: white;
 }
 .reset-button:hover {
     background-color: red;
 }
-/* submit button */
-.submit-button {
-    background-color: #88f283;
+
+/*
+    UTILITIES (Helper Classes)
+*/
+.centered {
+    display: block;
+    text-align: center;
 }
-.submit-button:hover {
-    background-color: green;
+
+hr {
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 10px;
 }
-/* ------------------------------------------ */
